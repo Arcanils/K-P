@@ -251,6 +251,7 @@ GameObject:
   - component: {fileID: 2063020103}
   - component: {fileID: 2063020106}
   - component: {fileID: 2063020102}
+  - component: {fileID: 2063020104}
   m_Layer: 0
   m_Name: Char
   m_TagString: Untagged
@@ -292,15 +293,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.66, y: 0.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!4 &2063020103
 Transform:
@@ -310,11 +311,24 @@ Transform:
   m_GameObject: {fileID: 2063020101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2063020104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2063020101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4cd308bfdf44c4db73b2b7d4e8b7cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
+  Anim: {fileID: 2063020106}
 --- !u!114 &2063020106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,6 +340,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad61ecf2d3d4854abe01b113f802ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Datas: []
+  Datas:
+  - Key: Idle
+    Value:
+      AnimFrames:
+      - {fileID: 21300036, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      Duration: 1
+  - Key: Top
+    Value:
+      AnimFrames:
+      - {fileID: 21300000, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300002, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300004, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300006, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300008, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300010, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300012, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300014, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300016, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      Duration: 1
+  - Key: Left
+    Value:
+      AnimFrames:
+      - {fileID: 21300018, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300020, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300022, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300024, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300026, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300028, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300030, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300032, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300034, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      Duration: 1
+  - Key: Bottom
+    Value:
+      AnimFrames:
+      - {fileID: 21300036, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300038, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300040, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300042, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300044, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300046, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300048, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300050, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300052, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      Duration: 1
+  - Key: Right
+    Value:
+      AnimFrames:
+      - {fileID: 21300054, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300056, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300058, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300060, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300062, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300064, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300066, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300068, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      - {fileID: 21300070, guid: 3f9c4e0f8a41bbb40850de48433ede4e, type: 3}
+      Duration: 1
   CurrentAnimKey: Idle
   GraphicTarget: {fileID: 2063020102}

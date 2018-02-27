@@ -34,7 +34,7 @@ public class AnimComponent : MonoBehaviour, ISerializationCallbackReceiver
 
 	public void PlayAnim(string KeyAnim)
 	{
-		if (string.IsNullOrEmpty(KeyAnim) || _datas == null || !_datas.ContainsKey(KeyAnim))
+		if (string.IsNullOrEmpty(KeyAnim) || KeyAnim == CurrentAnimKey || _datas == null || !_datas.ContainsKey(KeyAnim))
 			return;
 		else
 		{
@@ -59,7 +59,6 @@ public class AnimComponent : MonoBehaviour, ISerializationCallbackReceiver
 			var key = i != 0 && Datas[i].Key == Datas[i - 1].Key ? Datas[i].Key + "0" : Datas[i].Key;
 			_datas[key] = Datas[i].Value;
 		}
-		Datas = null;
 	}
 
 	void ISerializationCallbackReceiver.OnBeforeSerialize()
@@ -73,7 +72,6 @@ public class AnimComponent : MonoBehaviour, ISerializationCallbackReceiver
 		}
 
 		Datas = listTmp.ToArray();
-		_datas = null;
 	}
 }
 
